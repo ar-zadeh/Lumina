@@ -1,0 +1,55 @@
+Generate a Pydantic model for this extraction task:
+
+    Extraction Goal: material test
+
+    Fields to include:
+    [
+  {
+    "field_name": "material_name",
+    "description": "Name or chemical formula of the synthesized material",
+    "data_type": "string",
+    "unit": null,
+    "example": "TiO2 nanoparticles",
+    "validation_rules": "Non-empty string"
+  },
+  {
+    "field_name": "synthesis_temperature",
+    "description": "Temperature at which synthesis was performed",
+    "data_type": "number",
+    "unit": "Celsius",
+    "example": "450.0",
+    "validation_rules": "Range: -273 to 3000"
+  },
+  {
+    "field_name": "synthesis_method",
+    "description": "Method or process used for material synthesis",
+    "data_type": "string",
+    "unit": null,
+    "example": "Sol-gel process",
+    "validation_rules": null
+  },
+  {
+    "field_name": "reaction_time",
+    "description": "Duration of the synthesis reaction",
+    "data_type": "number",
+    "unit": "hours",
+    "example": "2.5",
+    "validation_rules": "Positive number"
+  },
+  {
+    "field_name": "particle_size",
+    "description": "Size of resulting particles or crystallites",
+    "data_type": "number",
+    "unit": "nanometers",
+    "example": "15.2",
+    "validation_rules": "Positive number"
+  }
+]
+
+    Additional Notes: Consider extracting precursor materials and post-processing steps if mentioned.
+
+    Provide:
+    0. A brief description of the extraction task aka Pydantic model name
+    1. Complete Pydantic model code (with imports)
+    2. A detailed extraction prompt that explains how to identify and extract each field
+    3. Field mappings for reference
