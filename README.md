@@ -1,96 +1,62 @@
-# HackPSU — Team Powerful
+## HackPSU — Team Powerful
+
+Gallery / Assets
+----------------
+
+Below are the screenshots and visual assets used in our demo. The files are included in the repository under `Lumina/assets/`.
+
+![Initial step](Lumina/assets/initial_step.png)
+
+![Pydantic Model Diagram](Lumina/assets/pydantic_model.png)
+
+![Results Dashboard](Lumina/assets/results.png)
+
+![RAG Example](Lumina/assets/RAG_example.png)
+
 
 Dates: Oct 25 — Oct 26, 2025
 
-Team: Team Powerful (Penn State Graduate Students)
+Team: Team Powerful
 
----
+## Elevator pitch
 
-Elevator pitch
----------------
+For researchers and students drowning in academic papers, the literature review process is a manual, months-long bottleneck. Our project, Lumina, is an AI research assistant that transforms this ordeal. Simply upload your PDFs and ask a question in plain English. Lumina instantly extracts and structures the key data, then allows you to have an interactive conversation with your entire library. We turn a mountain of static documents into a live, queryable knowledge base, saving hundreds of hours and accelerating discovery.
 
-Team Powerful designed an elegant, high-impact solution for HackPSU focused on delivering fast, reliable, and demonstrable value in 48 hours. Our submission combines practical engineering with a user-first demo that clearly communicates problem, solution, and measurable impact — the qualities judges look for in a winning hack.
+### What we built
+**Problem**: Academic literature review is painfully slow, manually intensive, and prone to high error rates, hindering research progress.
 
-What we built (concise)
-------------------------
+**Solution**: An AI-powered, multi-agent platform that automates literature review by structuring data from PDFs and enabling interactive, conversational querying of the entire document set.
 
-- Problem: Briefly describe the real-world problem you addressed (replace this with the project's exact problem statement).
-- Solution: A concise sentence or two describing the deliverable your team built during the hackathon and the core benefit it provides.
+### Key Features
+**Agentic AI Framework**: A custom multi-agent system orchestrates the workflow, from understanding user intent to generating validated, structured data.
 
-Key features (sample layout — edit to match your project)
-------------------------------------------------------
+**Dynamic Schema Generation**: Users define extraction goals in natural language; the AI generates the required Pydantic validation schema on the fly. No templates needed.
 
-- Real-time data ingestion and processing pipeline (low latency)
-- Lightweight model or algorithm for [task] (explain novelty, e.g., speed, accuracy, or cost saving)
-- Polished demo UI / CLI that shows problem → solution in under 90 seconds
-- Clear evaluation metrics and a short benchmark (e.g., latency, accuracy, cost)
+**Hybrid Model Architecture**: Combines fast, local open-source models (Qwen) for parsing with powerful cloud models (Gemini 1.5 Flash) for advanced reasoning and synthesis.
 
-Why this wins
--------------
+**Interactive RAG Querying**: A Retrieval-Augmented Generation pipeline allows users to ask complex, conversational questions about their newly structured knowledge base.
 
-Judges reward submissions that are: impactful, technically sound, clearly presented, and demo-ready. This README highlights the metrics, user story, and demo flow that make our hack compelling:
+## Demo (90-second script)
+- Upload & Ingest: Drag-and-drop 10+ research PDFs.
 
-- Impact: Explain how your project helps users/businesses/communities. Quantify where possible.
-- Technical novelty: Call out any clever engineering decisions or algorithms used.
-- Demo readiness: A short, reproducible demo path so judges can experience the value quickly.
+- Define Goal: In the text box, type: "Extract the methodology, sample size, and key findings."
 
-Demo (90-second script)
------------------------
+- Extract & Structure: Click "Extract Data." Show the structured data table generated in seconds from all PDFs.
 
-1. Start the app/service (one command).
-2. Show the input (a simple example) and press run.
-3. Display the output and the metric dashboard (latency, accuracy, cost).
-4. Call out the key win — why this output matters.
+- Query & Synthesize: Switch to the "Query" tab. Ask: "Which papers used a sample size over 500?"
 
-Replace the placeholders below with your project's commands and example inputs.
+- The Win: Display the AI's direct, synthesized answer and the supporting data. "We just turned a week of work into 90 seconds."
 
-Quick start (example placeholders)
----------------------------------
+## Install dependencies:
 
-1. Install dependencies
+pip install -r requirements.txt
+Set up environment: Create a .env file with your API keys.
 
-   - If Python: create a venv and pip install -r requirements.txt
+Start the demo:
 
-2. Start the demo
+python app.py
+Open the UI: Navigate to http://localhost:7860 in a browser.
 
-   - Example: python demo.py --sample inputs/sample1.json
-
-3. Open the UI (if included)
-
-   - Open http://localhost:8080 in a browser
-
-Architecture (high-level)
--------------------------
-
-Include a small architecture diagram here or a short bullet list of components you built:
-
-- Frontend: Lightweight React/Streamlit/Flask UI for the demo (if any)
-- Backend: Fast API / Flask / Lambda function serving the core model or algorithm
-- Data: In-memory or lightweight DB / flat-file for demo dataset
-- Model/Logic: Brief note about the model/algorithm and any pre-processing
-
-Evaluation & Benchmarks
------------------------
-
-Show a short table of metrics you measured during the hack (replace with your own numbers):
-
-- Latency: 50 ms (p50) / 110 ms (p95)
-- Accuracy / F1 / relevant metric: 92% / 0.89
-- Cost: $0.02 per 1k requests (demo estimate)
-
-Future work
------------
-
-- Production hardening (auth, rate limiting, monitoring)
-- Add end-to-end tests and CI
-- Expand dataset and run extended evaluation
-- Improve UX for non-technical users
-
-Team
-----
-
-- Team Powerful — Penn State Graduate Students
-  - Roles (example): ML / Modeling, Backend / APIs, Frontend / Demo, Product + Pitch
 
 Acknowledgements
 ----------------
@@ -107,7 +73,10 @@ Email: [your-email@example.com]  ← replace with a real contact
 Assets & Submission notes
 ------------------------
 
-- Attach screenshots, a short demo video link, and a slide deck here (add files to /assets or link to cloud storage).
+
+Other generated visuals (from PDF extraction) can be found under `Lumina/output/`.
+
+If you add or reorganize assets, update these paths accordingly. If you'd like, I can also generate a small `assets/README.md` gallery page or resize thumbnails for the README.
 
 How judges should run the demo (concise checklist)
 -------------------------------------------------
